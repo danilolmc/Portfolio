@@ -1,0 +1,373 @@
+$primary: #1C1A3A;
+$light: #fff;
+$logoMarkHeader: rgba(181, 209, 251, 0.03);
+$secondary: #267DFF;
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    // border: 2px solid black;
+}
+
+body{
+
+    font-family: "Roboto";
+    max-width: 100%;
+}
+
+header{
+    background: $primary;
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    clip-path: polygon(0% 0%, 100% 0, 100% 75%, 59% 100%, 0 84%);
+    color: $light;
+    position: relative;
+    height: 100vh;
+
+    .logo{
+        width: 3rem;
+        margin: 3rem 3rem;
+       justify-self: flex-end;
+    }
+    
+    .markbglogo{
+        position: absolute;
+    }
+
+    
+
+    .markbglogo:nth-child(2){
+        position: absolute;
+        right: 2rem;
+        top: 1rem;
+        width: 8rem;
+    }
+
+
+    .markbglogo:nth-child(3){
+        position: absolute;
+        bottom: -4rem;
+        left: 8rem;
+        width: 7rem;
+    }
+
+
+    .markbglogo:nth-child(4){
+        position: absolute;
+        bottom: 0rem;
+        left: 1rem;
+        width: 17rem;
+    }
+
+    div{
+
+        margin: 4rem 0 6rem 2.5rem;
+        
+        h1{
+
+            font: 400 3rem "Roboto";
+            color: $light;
+
+            span{
+                color:$secondary;
+            }
+            
+        }
+
+        p{
+            font: 300 24px "Roboto";
+            line-height: 4rem;
+        }
+
+        a{
+            color: $light;
+            text-decoration: none;
+            font-size: 1.5rem;
+            line-height: 3.5em;
+            margin-right: 1rem;
+        }
+        
+    }
+
+}
+
+#about{
+    // border:1px solid red;
+    margin-top: 0rem;
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    overflow: hidden;
+    padding: 10rem 1rem 0 1rem;
+
+    & > img{
+        position: absolute;
+        top: -2rem;
+        right: -10rem;
+    }
+
+    figure{
+        flex: 1;
+        position: relative;
+        display: grid;
+        margin-top: 5rem;
+        place-items: center;
+        
+        img{
+            position: absolute;
+        }
+        
+    }
+
+    div{
+        margin-top: 10rem;
+        display: grid;
+        place-items: center;
+
+        h1{
+            width: 90%;
+            color: $primary;
+            margin: 3rem auto;
+            font: 400 1.5rem "Roboto";
+            text-align: center;
+        }
+
+      
+        p{
+    
+            max-width: 90%;
+            text-align: justify;
+            font-family: Roboto;
+            font-weight: normal;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            text-align: justify;
+            margin: 2rem auto;
+            color: #AAAAAA;
+        }
+        
+        span a{
+            text-decoration: none;
+            color: $primary;
+            font-size: 3.2rem;
+            margin: 0 .8rem;
+            line-height: 14rem;
+        }
+
+        & > a{
+            background: $primary;
+            color: $light;
+            width: 20.1rem;
+            height: 5rem;
+            margin: 3rem auto;
+            text-align: center;
+            padding: 1.7rem 0;
+            text-decoration: none;
+            font: 500 1.5rem "Roboto";
+        }
+        
+    }
+    
+}
+
+h2{
+    color: $primary;
+    text-align: center;
+    position: relative;
+    font: 600 1.2rem "Roboto";
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+
+}
+
+
+h2::after{
+    content:"";
+    width: 4rem;
+    margin: 1rem 0;
+    height: .2rem;
+    background: #aaa;
+    bottom: 0;
+}
+
+
+#skills{
+    // border:1px solid red;
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    place-items: center;
+    overflow: hidden;
+    position: relative;
+
+    & > img{
+        position: absolute;
+    
+        top: 8rem;
+        left: -10rem;
+    }
+
+    div{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4rem;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4rem;
+
+        figure{
+            margin: 1rem;
+            display: grid;
+            place-items: center;
+            line-height: 5rem;
+            
+            i{
+   
+                font-size: 6.5rem;
+                text-align: center;
+                color: $secondary;
+            }
+
+            figcaption{
+                color: #aaa;
+                text-align: center;
+            }
+            
+        }
+
+        figure:last-of-type{
+
+            flex: 1;
+        }
+    }
+}
+
+#projects{
+
+    width: 100%;
+    overflow: hidden;
+    // position: relative;
+    margin-top: 2rem;
+
+    & > img{
+        position: absolute;
+        top: 2rem;
+        right: -10rem;
+        z-index: -1;
+        display: none;
+    }
+
+    & > div{
+
+        margin: 5rem 0rem 0rem 0rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+
+        figure{
+            
+        box-shadow: 0 5px 5px #ddd;
+        border: 1px solid #ddd;
+        flex-basis: 400px;
+        height: auto;
+        // max-height: 600px;
+        margin: 3rem;
+        padding-bottom: 2rem;
+        
+        & div{
+            z-index: 10;
+            background:#8257E5;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 15rem;
+            overflow: hidden;
+            
+            img{
+                max-width: 100%;
+                width: 50%;
+                
+            }
+        }
+
+      
+        
+        figcaption{
+            background: $light;
+            margin: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            
+            
+            & span:nth-of-type(1){
+                
+                
+                h1{
+                    line-height: 6rem;
+                    color: $primary;
+                }
+                
+                p{
+                    margin-bottom: 2rem;
+                    color: #aaa;
+                    text-align: justify;
+                    height: 100px;
+                }
+            }
+            
+            & span:nth-of-type(2){
+                
+                display: block;
+                
+                i{
+                    color: $secondary;
+                    font-size: 2rem;
+                }            
+            }
+            
+            & a{
+                background: $primary;
+                align-self: flex-start;
+                color: $light;
+                width: 8rem;
+                height: 3rem;
+                margin-top: 3rem;
+                text-decoration: none;
+                text-align: center;
+                padding: .9rem;
+                align-self: flex-end;
+
+                i{
+                    font: 400 1rem "Roboto";
+                }
+            }
+        }
+        
+    }
+    
+    figure:nth-of-type(2),
+    figure:nth-of-type(3),
+    figure:nth-of-type(4){
+
+        
+        img{
+            width: 100%;
+        }
+
+    }
+    
+}
+}
