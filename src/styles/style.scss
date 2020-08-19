@@ -65,7 +65,7 @@ header{
 
     div{
 
-        margin: 4rem 0 6rem 2.5rem;
+        margin: 7rem 0 6rem 2.5rem;
         
         h1{
 
@@ -370,4 +370,194 @@ h2::after{
     }
     
 }
+}
+
+#moreProjects{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0 10rem 0;
+
+    p{
+        font-size: 1.5rem;
+        color: $primary;
+        width: 50%;
+        text-align:center;
+        line-height: 3rem;
+                
+    }
+
+    i{
+        margin: 7rem 0 0 0;
+        color:$primary;
+        font-size: 8rem;
+    }
+}
+
+#contato{
+
+    // flex-direction: column;
+    align-items: center;
+    
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem 0;
+
+        & > p{
+            color: #8F8F8F;
+            text-align: center;
+            font-size: 1.8rem;
+            width: 22rem;
+            margin: 0rem 0 5rem 0;
+        }
+
+        & > div{
+
+
+            display: flex;
+            // flex-direction: column;
+            align-items: center;
+
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+
+            & > div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 5rem;
+            position: relative;
+            min-height: 220px;
+            height: 220px;
+
+            a,i{
+                text-decoration: none;
+                color: $primary;
+                font-size: 6rem; 
+                margin: 0;  
+            }
+            
+            p{
+                margin: 1rem 0 0 0 ;
+                font-size: 1rem;
+            }
+            
+            span{
+                margin-top: 2rem;
+                color: #aaa;
+            }
+            
+        }
+        }
+    }
+}
+
+
+footer{
+    background: $primary;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 300px;
+
+    div{
+        display: flex;
+        flex-direction: column;
+
+
+        img{
+            margin: 2rem 0;
+        }
+
+        p{
+            color: $light;
+            font-size: 2rem;
+
+            span{
+                color: $secondary;
+            }
+        }
+
+        & > span {
+
+            display: flex;
+            justify-content: center;
+
+            > a{
+                text-decoration: none;
+
+
+                & > i{
+
+                    color: $light;
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    line-height: 4.5em;
+                    margin: 2rem .4rem;
+                }
+            }
+      
+        }
+    }
+}
+
+@media (min-width:700px){
+
+    header{
+
+        height: 110vh;
+
+        overflow: hidden;
+
+        .markbglogo:nth-child(2){
+            position: absolute;
+            right: 5rem;
+            top: 5rem;
+            width: 8rem;
+        }
+
+        
+    .markbglogo:nth-child(3){
+        position: absolute;
+        bottom: 10rem;
+        left:  70%;
+        width: 7rem;
+    }
+
+    
+    .markbglogo:nth-child(4){
+        position: absolute;
+        bottom: 12rem;
+        // background: red;
+        left: 55%;
+        width: 20rem;
+    }
+
+    .logo{
+        margin-left: 4.5rem;
+    }
+
+    div{
+
+        margin: 7rem 0 6rem 4.5rem;
+
+        h1{
+            font-size: 4rem;
+        }
+    }
+}
+    
 }
