@@ -200,7 +200,6 @@ h2::after{
 
 
 #skills{
-    // border:1px solid red;
     position: relative;
     width: 100%;
     display: grid;
@@ -246,7 +245,7 @@ h2::after{
 
         figure:last-of-type{
 
-            flex: 1;
+           flex:1
         }
     }
 }
@@ -393,6 +392,11 @@ h2::after{
         margin: 7rem 0 0 0;
         color:$primary;
         font-size: 8rem;
+        transition: opacity .5s;
+
+        &:hover{
+            opacity: .9;
+        }
     }
 }
 
@@ -407,7 +411,7 @@ h2::after{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 3rem 0;
+        margin: 3rem 0 8rem 0;
 
         & > p{
             color: #8F8F8F;
@@ -421,9 +425,7 @@ h2::after{
 
 
             display: flex;
-            // flex-direction: column;
             align-items: center;
-
             flex-wrap: wrap;
             justify-content: center;
             width: 100%;
@@ -432,19 +434,20 @@ h2::after{
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-end;
             width: 100%;
             max-width: 300px;
-            margin-bottom: 5rem;
+            margin: 3rem auto; 
             position: relative;
-            min-height: 220px;
-            height: 220px;
+            height: auto;
+            // border: 1px solid red;
 
             a,i{
                 text-decoration: none;
                 color: $primary;
-                font-size: 6rem; 
+                font-size: 4rem; 
                 margin: 0;  
+                height: 100px;
             }
             
             p{
@@ -453,7 +456,7 @@ h2::after{
             }
             
             span{
-                margin-top: 2rem;
+                margin-top: 0rem;
                 color: #aaa;
             }
             
@@ -518,7 +521,7 @@ footer{
 
     header{
 
-        height: 110vh;
+        height: 10  0vh;
 
         overflow: hidden;
 
@@ -552,7 +555,7 @@ footer{
 
     div{
 
-        margin: 7rem 0 6rem 4.5rem;
+        margin: 5rem 0 6rem 4.5rem;
 
         h1{
             font-size:4rem;
@@ -606,11 +609,6 @@ footer{
             justify-self: left;
             align-items: flex-start;
         }
-
-        // h2{
-        //     justify-content: left;
-        // }
-
       
         p{
     
@@ -620,7 +618,6 @@ footer{
             font-weight: normal;
             font-size: 1rem;
             line-height: 1.5rem;
-            text-align: left;
             margin: 1rem 0;
             color: #AAAAAA;
         }
@@ -638,6 +635,11 @@ footer{
             font-size: 2.2rem;
             margin: 0 1rem 0 0;
             line-height: 6rem;
+            transition: .5s;
+
+            &:hover{
+                opacity: .9;
+            }
 
         }
 
@@ -652,10 +654,228 @@ footer{
             justify-self: start;
             text-decoration: none;
             font: 500 1rem "Roboto";
+            transition: opacity .5s;
+
+
+        }
+
+        
+        & > a:hover{
+            opacity: .9;
         }
         
     }
     
     
+}
+
+#skills{
+    margin-top: 5rem;
+
+
+
+    & > img{
+        top: 5rem;
+    }
+
+    div{
+
+        display: flex;
+        justify-content: center;
+        margin: 10rem auto 5rem auto;
+
+        figure{
+
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+            position: relative;
+            line-height: 0;
+
+            i{
+                font-size: 4rem;
+            }
+
+            &:hover figcaption{
+                opacity:1;
+                transform: translateY(.7rem);
+            }
+
+    
+
+            figcaption{
+                opacity: 0;
+                background: $primary;
+                height: 2rem;
+                border-radius: 5px;
+                transform: translateY(1rem);
+                padding: 1rem;
+                color: $light;
+                position: relative;
+                font-size: .8rem;
+                transition:.5s;
+                display: flex;
+                justify-content: center;;
+            }
+
+        }
+
+        figure:last-of-type{
+
+            flex:0;
+         }
+
+       
+    }
+
+
+}
+
+#projects{
+
+
+    & > div{
+
+        margin: 5rem 0rem 0rem 0rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        figure{
+
+        transform: scale(.8);
+        box-shadow: 0 5px 5px #ddd;
+        border: 1px solid #ddd;
+        flex-basis: 400px;
+        height: auto;
+        // max-height: 600px;
+        margin: 0rem;
+        padding-bottom: 2rem;
+        //  transition: 1s;   
+
+        &:hover{
+            border:1px solid #aaa
+        }
+        
+        & div{
+            z-index: 10;
+            background:#8257E5;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 15rem;
+            overflow: hidden;
+            
+            img{
+                max-width: 100%;
+                width: 50%;
+                
+            }
+        }
+
+      
+        
+        figcaption{
+            background: $light;
+            margin: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            
+            
+            & span:nth-of-type(1){
+                
+                
+                h1{
+                    line-height: 6rem;
+                    color: $primary;
+                }
+                
+                p{
+                    margin-bottom: 2rem;
+                    color: #aaa;
+                    text-align: justify;
+                    height: 100px;
+                }
+            }
+            
+            & span:nth-of-type(2){
+                
+                display: block;
+                
+                i{
+                    color: $secondary;
+                    font-size: 2rem;
+                }            
+            }
+            
+            & a{
+                background: $primary;
+                align-self: flex-start;
+                color: $light;
+                width: 8rem;
+                height: 3rem;
+                margin-top: 3rem;
+                text-decoration: none;
+                text-align: center;
+                padding: .9rem;
+                align-self: flex-end;
+                transition: opacity .5s;
+
+                &:hover{
+                    opacity: .9;
+                }
+
+                i{
+                    font: 400 1rem "Roboto";
+                }
+            }
+        }
+        
+    }
+}
+
+}
+
+
+#contato{
+
+.content{
+
+   & > div{
+        
+    & > div{
+        
+         span{
+            margin-top:0rem;
+        }
+
+         p{
+            opacity: 0;
+            background: $primary;
+            height: 2.3rem;
+            border-radius: 5px;
+            transform: translateY(1rem);
+            padding: .6rem .6rem;
+            color: $light;
+            margin-top: 0;
+            position: relative;
+            font-size: .8rem;
+            transition:.5s;
+            display: flex;
+            justify-content: center;;
+        }
+
+        &:hover{
+            & > p{
+                opacity: 1;
+            }
+        }
+    }
+}
+}
 }
 }
