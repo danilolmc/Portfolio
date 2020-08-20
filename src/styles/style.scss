@@ -845,6 +845,13 @@ footer{
 
 .content{
 
+    flex-direction: column-reverse;
+
+    & >p{
+        width: 60rem;
+        margin-top: 1rem;
+    }
+
    & > div{
         
     & > div{
