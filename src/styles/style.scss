@@ -224,14 +224,14 @@ h2::after{
         margin-top: 4rem;
 
         figure{
-            margin: 1rem;
+            margin: 1.5rem;
             display: grid;
             place-items: center;
             line-height: 5rem;
             
             i{
    
-                font-size: 6.5rem;
+                font-size: 6rem;
                 text-align: center;
                 color: $secondary;
             }
@@ -535,7 +535,7 @@ footer{
         
     .markbglogo:nth-child(3){
         position: absolute;
-        bottom: 10rem;
+        bottom: 7rem;
         left:  70%;
         width: 7rem;
     }
@@ -543,7 +543,7 @@ footer{
     
     .markbglogo:nth-child(4){
         position: absolute;
-        bottom: 12rem;
+        bottom: 10rem;
         // background: red;
         left: 55%;
         width: 20rem;
@@ -688,7 +688,7 @@ footer{
 
             justify-content: center;
             align-items: center;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
             position: relative;
             line-height: 0;
 
@@ -698,7 +698,7 @@ footer{
 
             &:hover figcaption{
                 opacity:1;
-                transform: translateY(.7rem);
+                transform: translateY(1rem);
             }
 
     
@@ -706,10 +706,10 @@ footer{
             figcaption{
                 opacity: 0;
                 background: $primary;
-                height: 2rem;
+                height: 1rem;
                 border-radius: 5px;
-                transform: translateY(1rem);
-                padding: 1rem;
+                transform: translateY(2rem);
+                padding: .8rem;
                 color: $light;
                 position: relative;
                 font-size: .8rem;
@@ -849,7 +849,7 @@ footer{
 
     & >p{
         width: 60rem;
-        margin-top: 1rem;
+        margin-top:3rem;
     }
 
    & > div{
@@ -863,22 +863,23 @@ footer{
          p{
             opacity: 0;
             background: $primary;
-            height: 2.3rem;
+            height: 2rem;
             border-radius: 5px;
-            transform: translateY(1rem);
-            padding: .6rem .6rem;
+            transform: translateY(2rem);
+            padding: .5rem .6rem;
             color: $light;
             margin-top: 0;
             position: relative;
             font-size: .8rem;
             transition:.5s;
             display: flex;
-            justify-content: center;;
+            justify-content: center;
         }
-
+        
         &:hover{
             & > p{
                 opacity: 1;
+                transform: translateY(1rem);;
             }
         }
     }
