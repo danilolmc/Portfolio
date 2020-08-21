@@ -544,7 +544,6 @@ footer{
     .markbglogo:nth-child(4){
         position: absolute;
         bottom: 10rem;
-        // background: red;
         left: 55%;
         width: 20rem;
     }
@@ -856,6 +855,15 @@ footer{
         
     & > div{
         
+   
+        & > a > i{
+            transition:.5s;
+        }
+
+        & > a > i:hover{
+            opacity: .9;
+        }
+
          span{
             margin-top:0rem;
         }
