@@ -215,7 +215,6 @@ header{
 h2{
     color: $primary;
     text-align: center;
-    position: relative;
     font-size: 1.2rem;
     font-weight:  600;
     font-family: "Roboto",sans-serif;
@@ -240,12 +239,15 @@ h2::after{
 #skills{
     width: 100%;
     display: flex;
-
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
     div{
         display: flex;
         flex-wrap: wrap;
         padding: 0 4rem;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         margin-top: 4rem;
 
@@ -254,6 +256,8 @@ h2::after{
             display: grid;
             place-items: center;
             line-height: 5rem;
+            background: #eee;
+            width: 9rem;
             
             i{
    
@@ -279,16 +283,7 @@ h2::after{
 #projects{
 
     width: 100%;
-    overflow: hidden;
     margin-top: 2rem;
-
-    & > img{
-        position: absolute;
-        top: 2rem;
-        right: -10rem;
-        z-index: -1;
-        display: none;
-    }
 
     & > div{
 
@@ -304,24 +299,26 @@ h2::after{
             
         box-shadow: 0 5px 5px #ddd;
         border: 1px solid #ddd;
-        flex-basis: 400px;
         height: auto;
-        margin: 3rem;
-        padding-bottom: 2rem;
+        margin: 3rem 1rem;
+        max-width: 350px;
         
         & div{
             z-index: 10;
             background:#8257E5;
             width: 100%;
+       
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 15rem;
+            height: auto;
+            min-height: 200px;
             overflow: hidden;
             
             img{
                 max-width: 100%;
                 width: 50%;
+                border:1px solid #fff;
                 
             }
         }
@@ -339,13 +336,15 @@ h2::after{
                 
                 
                 h1{
-                    line-height: 6rem;
+                    line-height: 2rem;
+                    margin: 2rem auto;
                     color: $primary;
                 }
                 
                 p{
                     margin-bottom: 2rem;
                     color: #aaa;
+                    font-size: .9rem;
                     text-align: justify;
                     height: 100px;
                 }
@@ -365,9 +364,9 @@ h2::after{
                 background: $primary;
                 align-self: flex-start;
                 color: $light;
-                width: 8rem;
+                width: 100%;
                 height: 3rem;
-                margin-top: 3rem;
+                margin: 2rem 0 1rem 0;
                 text-decoration: none;
                 text-align: center;
                 padding: .9rem;
@@ -404,14 +403,19 @@ h2::after{
     align-items: center;
     justify-content: center;
     margin: 5rem 0 10rem 0;
+    border:1px solid;
 
     p{
         font-size: 1.5rem;
         color: $primary;
-        width: 50%;
+        width: 80%;
         text-align:center;
         line-height: 3rem;
                 
+    }
+
+    & > a{
+        text-decoration:none;
     }
 
     i{
@@ -429,6 +433,8 @@ h2::after{
 #contato{
 
     align-items: center;
+    border:1px solid;
+
     
     .content{
         display: flex;
@@ -442,7 +448,7 @@ h2::after{
             color: #8F8F8F;
             text-align: center;
             font-size: 1.8rem;
-            width: 22rem;
+            max-width: 20rem;
             margin: 0rem 0 5rem 0;
         }
 
@@ -707,19 +713,13 @@ footer{
 }
 
 #skills{
-    margin-top: 5rem;
-
-
-
-    & > img{
-        top: 5rem;
-    }
+    margin-top: 0rem;
 
     div{
 
         display: flex;
         justify-content: center;
-        margin: 10rem auto 5rem auto;
+        margin: 5rem auto;
 
         figure{
 
@@ -786,8 +786,8 @@ footer{
         transform: scale(.8);
         box-shadow: 0 5px 5px #ddd;
         border: 1px solid #ddd;
-        flex-basis: 400px;
         height: auto;
+        max-width: 400px;
         margin: 0rem;
         padding-bottom: 2rem;
 
@@ -825,15 +825,17 @@ footer{
                 
                 
                 h1{
-                    line-height: 6rem;
                     color: $primary;
+                    font-size: 1.35rem;
+                    margin: 3rem auto 0 auto;
+                    height: 4rem;
                 }
                 
                 p{
-                    margin-bottom: 2rem;
                     color: #aaa;
                     text-align: justify;
                     height: 100px;
+                    font-size: 1.2rem;
                 }
             }
             
@@ -853,7 +855,7 @@ footer{
                 color: $light;
                 width: 8rem;
                 height: 3rem;
-                margin-top: 3rem;
+                margin: 3rem 0 0 0;
                 text-decoration: none;
                 text-align: center;
                 padding: .9rem;
