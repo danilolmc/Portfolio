@@ -8,12 +8,11 @@ $secondary: #267DFF;
     margin:0;
     padding:0;
     box-sizing: border-box;
-    // border: 2px solid black;
 }
 
 body{
 
-    font-family: "Roboto";
+    font-family: "Roboto",sans-serif;
     max-width: 100%;
 }
 
@@ -23,14 +22,16 @@ header{
     width: 100%;
     display: flex;
     flex-direction: column;
-    clip-path: polygon(0% 0%, 100% 0, 100% 75%, 59% 100%, 0 84%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 75%, 59% 79%, 0 84%);
     color: $light;
     position: relative;
     height: 100vh;
+    padding: 2rem;
+    align-items: flex-start;
 
     .logo{
-        width: 3rem;
-        margin: 3rem 3rem;
+        width: 2.5rem;
+        // margin: 2rem 0 0 1.6rem;
        justify-self: flex-end;
     }
     
@@ -65,11 +66,18 @@ header{
 
     div{
 
-        margin: 7rem 0 6rem 2.5rem;
+        margin: 30% 0;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
         
         h1{
-
-            font: 400 3rem "Roboto";
+            text-align: left;
+            font-size: 2.7rem;
+            font-weight:  400;
+            font-family: "Roboto",sans-serif;
             color: $light;
 
             span{
@@ -79,54 +87,67 @@ header{
         }
 
         p{
-            font: 300 24px "Roboto";
-            line-height: 4rem;
+            font-size: 1rem;
+            font-weight:  300;
+            font-family: "Roboto",sans-serif;
+            line-height: 3rem;
         }
 
-        a{
+        & > span {
+            height: 40px;
+            display: flex;
+            width: 200px;
+            margin-top: 1rem;
+            align-self: start;
+            justify-content: space-between;
+        }
+
+        & > span > a{
             color: $light;
             text-decoration: none;
             font-size: 1.5rem;
-            line-height: 3.5em;
-            margin-right: 1rem;
+            border: 1px solid #fff;
+            width: 20%;
+            height: 40px;
+            display: grid;
+            place-items: center;
         }
         
     }
 
 }
 
+
+
 #about{
 
-    margin-top: 0rem;
-    position: relative;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
+    transform: translateY(-70px);
+    border:1px solid red;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    overflow: hidden;
-    padding: 10rem 1rem 0 1rem;
+    justify-content: center;
+    padding: 5rem 0;
 
-    & > img{
-        position: absolute;
-        top: -2rem;
-        right: -10rem;
-    }
 
     figure{
-        flex: 1;
-        position: relative;
+        margin-top: 0rem;
+        padding: 0;
         display: grid;
-        margin-top: 5rem;
+        width: 100%;
+        height: 100%;
         place-items: center;
         
         img{
-            position: absolute;
+            width: 80%;
+            max-width: 350px;
+            margin: 0 auto;
         }
         
     }
 
     div{
-        margin-top: 10rem;
         display: grid;
         place-items: center;
 
@@ -134,7 +155,9 @@ header{
             width: 90%;
             color: $primary;
             margin: 3rem auto;
-            font: 400 1.5rem "Roboto";
+            font-size: 1.5rem;
+            font-weight:  400;
+            font-family: "Roboto",sans-serif;
             text-align: center;
         }
 
@@ -143,33 +166,46 @@ header{
     
             max-width: 90%;
             text-align: justify;
-            font-family: Roboto;
+            font-family: "Roboto",sans-serif;
             font-weight: normal;
             font-size: 1.2rem;
             line-height: 1.5rem;
             text-align: justify;
-            margin: 2rem auto;
+            margin: 2rem 2rem;
             color: #AAAAAA;
         }
         
+        & > span{
+            height: 40px;
+            display:flex;
+            width: 80%;
+            justify-content: space-between;
+            margin: 2rem auto;
+        }
+
         span a{
             text-decoration: none;
             color: $primary;
             font-size: 3.2rem;
-            margin: 0 .8rem;
-            line-height: 14rem;
+            height: 100%;
+            width: 15%;
+            line-height: 0;
+            background: #eee;
         }
 
         & > a{
             background: $primary;
             color: $light;
-            width: 20.1rem;
-            height: 5rem;
+            width: 16rem;
+            height: 4rem;
             margin: 3rem auto;
             text-align: center;
-            padding: 1.7rem 0;
+            display: grid;
+            place-items: center;
             text-decoration: none;
-            font: 500 1.5rem "Roboto";
+            font-size: 1.2rem;
+            font-weight:  500;
+            font-family: "Roboto",sans-serif;
         }
         
     }
@@ -180,7 +216,9 @@ h2{
     color: $primary;
     text-align: center;
     position: relative;
-    font: 600 1.2rem "Roboto";
+    font-size: 1.2rem;
+    font-weight:  600;
+    font-family: "Roboto",sans-serif;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -200,20 +238,8 @@ h2::after{
 
 
 #skills{
-    position: relative;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    place-items: center;
-    overflow: hidden;
-    position: relative;
-
-    & > img{
-        position: absolute;
-    
-        top: 8rem;
-        left: -10rem;
-    }
+    display: flex;
 
     div{
         display: flex;
@@ -254,7 +280,6 @@ h2::after{
 
     width: 100%;
     overflow: hidden;
-    // position: relative;
     margin-top: 2rem;
 
     & > img{
@@ -281,7 +306,6 @@ h2::after{
         border: 1px solid #ddd;
         flex-basis: 400px;
         height: auto;
-        // max-height: 600px;
         margin: 3rem;
         padding-bottom: 2rem;
         
@@ -350,7 +374,9 @@ h2::after{
                 align-self: flex-end;
 
                 i{
-                    font: 400 1rem "Roboto";
+                    font-size: 1rem;
+                    font-weight:  400;
+                    font-family: "Roboto",sans-serif;
                 }
             }
         }
@@ -402,7 +428,6 @@ h2::after{
 
 #contato{
 
-    // flex-direction: column;
     align-items: center;
     
     .content{
@@ -440,7 +465,6 @@ h2::after{
             margin: 3rem auto; 
             position: relative;
             height: auto;
-            // border: 1px solid red;
 
             a,i{
                 text-decoration: none;
@@ -521,9 +545,9 @@ footer{
 
     header{
 
-        height: 10  0vh;
-
-        overflow: hidden;
+        height: 120vh;
+        padding: 2rem;
+        overflow: hidden;   
 
         .markbglogo:nth-child(2){
             position: absolute;
@@ -535,7 +559,7 @@ footer{
         
     .markbglogo:nth-child(3){
         position: absolute;
-        bottom: 7rem;
+        bottom: 12rem;
         left:  70%;
         width: 7rem;
     }
@@ -543,64 +567,77 @@ footer{
     
     .markbglogo:nth-child(4){
         position: absolute;
-        bottom: 10rem;
+        bottom: 17rem;
         left: 55%;
         width: 20rem;
     }
 
     .logo{
-        margin-left: 4.5rem;
+        margin: 1rem 4.5rem 0 4.5rem;
     }
 
     div{
 
-        margin: 5rem 0 6rem 4.5rem;
+        margin: 8rem 0 6rem 4rem;
+        align-self: flex-start;
 
         h1{
             font-size:4rem;
         }
+        
+        p{
+            
+            margin-left: .2rem;
+            line-height: 4rem;
+            font-size: 1.5rem;
+        }
+
+        & > *{
+            align-self: flex-start;
+        }
+        
+        & > span{
+            border:1px solid #fff;
+            margin-left: .2rem;
+        }
     }
+    
 
 }
 
 #about{
     
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-content: start;
-
-    & > img{
-        position: absolute;
-        top: -2rem;
-        right: -10rem;
-        display: none;
-    }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform:translateY(-100px);
 
     figure{
-        position: relative;
-        margin-top:-10rem;
-        align-self: center;
+        margin-top:0;
+        flex:1;
+        display: flex;
+        width: 100%;
+        height:100%;
+        justify-content: center;
 
-        img{
-            position: absolute;
-        }
         
     }
 
     div{
-        margin-top: -5rem;
-        display: grid;
-        align-self: start;
-        justify-content: left;
-        
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        flex:1;
      
 
         h1{
             width: 70%;
             color: $primary;
             margin: 1rem 0;
-            font: 400 1.5rem "Roboto";
+            font-size: 1.5rem;
+            font-weight:  400;
+            font-family: "Roboto",sans-serif;
             text-align: left;
         }
 
@@ -613,7 +650,7 @@ footer{
     
             max-width: 90%;
             text-align: justify;
-            font-family: Roboto;
+            font-family: "Roboto",sans-serif;
             font-weight: normal;
             font-size: 1rem;
             line-height: 1.5rem;
@@ -621,14 +658,13 @@ footer{
             color: #AAAAAA;
         }
         
-        span{
+        & > span{
 
-            justify-self: left;
-            align-items: flex-start;    
-            margin: 0;
+            margin: 1rem 0;
+            width: 55%;
         }
 
-        span a{
+        & > span a{
             text-decoration: none;
             color: $primary;
             font-size: 2.2rem;
@@ -652,7 +688,9 @@ footer{
             padding: 1.5rem 0;
             justify-self: start;
             text-decoration: none;
-            font: 500 1rem "Roboto";
+            font-size: 1rem;
+            font-weight:  500;
+            font-family: "Roboto",sans-serif;
             transition: opacity .5s;
 
 
@@ -714,7 +752,7 @@ footer{
                 font-size: .8rem;
                 transition:.5s;
                 display: flex;
-                justify-content: center;;
+                justify-content: center;
             }
 
         }
@@ -750,10 +788,8 @@ footer{
         border: 1px solid #ddd;
         flex-basis: 400px;
         height: auto;
-        // max-height: 600px;
         margin: 0rem;
         padding-bottom: 2rem;
-        //  transition: 1s;   
 
         &:hover{
             border:1px solid #aaa
@@ -829,7 +865,9 @@ footer{
                 }
 
                 i{
-                    font: 400 1rem "Roboto";
+                    font-size: 1rem;
+                    font-weight:  400;
+                    font-family: "Roboto",sans-serif;
                 }
             }
         }
