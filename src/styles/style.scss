@@ -123,7 +123,6 @@ header{
 
     width: 100%;
     transform: translateY(-70px);
-    border:1px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -403,7 +402,6 @@ h2::after{
     align-items: center;
     justify-content: center;
     margin: 5rem 0 10rem 0;
-    border:1px solid;
 
     p{
         font-size: 1.5rem;
@@ -433,7 +431,6 @@ h2::after{
 #contato{
 
     align-items: center;
-    border:1px solid;
 
     
     .content{
@@ -887,8 +884,8 @@ footer{
     flex-direction: column-reverse;
 
     & >p{
-        width: 60rem;
         margin-top:3rem;
+        max-width: 55rem;
     }
 
    & > div{
@@ -934,4 +931,17 @@ footer{
 }
 }
 }
+}
+
+
+
+@media (min-width:1023px){
+
+    header{
+
+        & > div{
+            margin-top: 9rem;
+        
+        }
+    }
 }
