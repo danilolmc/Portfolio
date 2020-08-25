@@ -30,8 +30,8 @@ header{
     clip-path: polygon(0% 0%, 100% 0, 100% 75%, 59% 79%, 0 84%);
     color: $light;
     position: relative;
-    height: 100vh;
-    padding: 2rem;
+    height: auto;
+    padding: 2rem 0 6rem 2rem;
     align-items: flex-start;
 
     .logo{
@@ -68,7 +68,7 @@ header{
 
     div{
 
-        margin: 30% 0;
+        margin: 35% 0;
         display:flex;
         flex-direction: column;
         justify-content: center;
