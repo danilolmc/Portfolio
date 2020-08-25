@@ -8,6 +8,11 @@ $secondary: #267DFF;
     margin:0;
     padding:0;
     box-sizing: border-box;
+    outline:none;   
+}
+
+p,span{
+    cursor:context-menu;
 }
 
 body{
@@ -31,15 +36,12 @@ header{
 
     .logo{
         width: 2.5rem;
-        // margin: 2rem 0 0 1.6rem;
        justify-self: flex-end;
     }
     
     .markbglogo{
         position: absolute;
     }
-
-    
 
     .markbglogo:nth-child(2){
         position: absolute;
@@ -96,7 +98,7 @@ header{
         & > span {
             height: 40px;
             display: flex;
-            width: 200px;
+            width: 55%;
             margin-top: 1rem;
             align-self: start;
             justify-content: space-between;
@@ -106,8 +108,6 @@ header{
             color: $light;
             text-decoration: none;
             font-size: 1.5rem;
-            border: 1px solid #fff;
-            width: 20%;
             height: 40px;
             display: grid;
             place-items: center;
@@ -189,7 +189,6 @@ header{
             height: 100%;
             width: 15%;
             line-height: 0;
-            background: #eee;
         }
 
         & > a{
@@ -255,7 +254,6 @@ h2::after{
             display: grid;
             place-items: center;
             line-height: 5rem;
-            background: #eee;
             width: 9rem;
             
             i{
@@ -316,8 +314,8 @@ h2::after{
             
             img{
                 max-width: 100%;
-                width: 50%;
-                border:1px solid #fff;
+                width: 55%;
+                height: 200px;
                 
             }
         }
@@ -345,7 +343,7 @@ h2::after{
                     color: #aaa;
                     font-size: .9rem;
                     text-align: justify;
-                    height: 100px;
+                    height: 80px;
                 }
             }
             
@@ -355,7 +353,7 @@ h2::after{
                 
                 i{
                     color: $secondary;
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }            
             }
             
@@ -549,8 +547,11 @@ footer{
     header{
 
         height: 120vh;
-        padding: 2rem;
+        padding: 2rem 5rem;
         overflow: hidden;   
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
 
         .markbglogo:nth-child(2){
             position: absolute;
@@ -576,13 +577,13 @@ footer{
     }
 
     .logo{
-        margin: 1rem 4.5rem 0 4.5rem;
+        margin: 1rem 0 0 1rem;
+        align-self: flex-start;
     }
 
     div{
 
-        margin: 8rem 0 6rem 4rem;
-        align-self: flex-start;
+        margin: 18% 0 0 0;
 
         h1{
             font-size:4rem;
@@ -600,8 +601,8 @@ footer{
         }
         
         & > span{
-            border:1px solid #fff;
-            margin-left: .2rem;
+            margin-left:.3rem;
+            width: 200px;
         }
     }
     
@@ -664,15 +665,14 @@ footer{
         & > span{
 
             margin: 1rem 0;
-            width: 55%;
+            max-width: 210px;
         }
 
         & > span a{
             text-decoration: none;
             color: $primary;
-            font-size: 2.2rem;
-            margin: 0 1rem 0 0;
-            line-height: 6rem;
+            font-size: 1.8rem;
+            line-height: 0rem;
             transition: .5s;
 
             &:hover{
@@ -805,6 +805,7 @@ footer{
             img{
                 max-width: 100%;
                 width: 50%;
+                height: auto;
                 
             }
         }
@@ -940,8 +941,37 @@ footer{
     header{
 
         & > div{
-            margin-top: 9rem;
+            margin-top: 20%;
         
+        }
+    }
+}
+
+
+@media (min-width:1439px){
+
+    header{
+
+        .logo{
+            width: 4rem;
+            margin-top: 1rem;
+        }
+
+        & > div{
+            margin-top: 14rem;
+            
+            h1{
+                font-size:5rem;
+            }    
+
+            p{
+                font-size: 2rem;
+            }
+
+            i{
+                font-size: 2rem;
+            }
+
         }
     }
 }
