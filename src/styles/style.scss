@@ -263,6 +263,11 @@ h2::after{
                 color: $secondary;
             }
 
+            i.icomoon:before {
+                content: "\e900";
+                color: $secondary;
+              }
+
             figcaption{
                 color: #aaa;
                 text-align: center;
