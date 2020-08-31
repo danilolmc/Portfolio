@@ -262,18 +262,18 @@ h2::after{
                 text-align: center;
                 color: $secondary;
             }
-            i.icon-webpack:before,
-            i.icon-jquery:before {
-                color: $secondary;
+            
+            img{
+                width:5.5rem;
+                height:5.5rem;
+
             }
+            img.webpack-logo{
+                width:73px;
+                height:73px;
 
-            i.icon-webpack:before {
-                content: "\e901";
-              }
-
-            i.icon-jquery:before {
-                content: "\e900";
-             }
+            }
+            
             
               figcaption{
                 color: #aaa;
@@ -747,6 +747,17 @@ footer{
                 transform: translateY(1rem);
             }
 
+            img{
+                width:4.2rem;
+                height:4.2rem;
+
+            }
+            img.webpack-logo{
+                width:4.5rem;
+                height:4.5rem;
+
+            }
+
     
 
             figcaption{
@@ -762,6 +773,8 @@ footer{
                 transition:.5s;
                 display: flex;
                 justify-content: center;
+
+            
             }
 
         }
